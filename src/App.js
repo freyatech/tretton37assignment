@@ -1,25 +1,38 @@
+import  React  from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/header';
+import Layout from './components/layout';
+import { render } from '@testing-library/react';
+import { getEmployees } from './utils/api';
 
-function App() {
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      profiles: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      profiles2: []
+    }
+  }
+
+  componentDidMount() {
+    this.getEmp()
+  }
+  getEmp = async () => {
+    let data = await getEmployees();
+        this.setState({profiles2:data})
+        console.log(data)
+    }
+
+  render() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header></Header>
+      <Layout profiles={this.state.profiles2}></Layout>
     </div>
   );
+}
+  
 }
 
 export default App;

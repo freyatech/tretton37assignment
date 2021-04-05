@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  justify-content: center;
 }
 
 .App-logo {
@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -36,3 +36,227 @@
     transform: rotate(360deg);
   }
 }
+.header {
+  width: "100%";
+  height: 60px;
+  background-color: #002b55;
+}
+.profileContainer {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  color: #002b55;
+}
+.profile {
+  width: 280px;
+  height: 180px;
+  background-color: white;
+  border: solid 1px #002b5550;
+  border-radius: 15px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-box-shadow: 0 5px 6px -6px #777;
+  -moz-box-shadow: 0 5px 6px -6px #777;
+  box-shadow: 0 5px 6px -6px #777;
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.profile:hover {
+  width: 295px;
+  height: 190px;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.profile-photo {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  margin: 3px;
+}
+.profile-layout-left {
+  width: 47%;
+  height: 97%;
+  float: left;
+}
+.profile-layout-right {
+  width: 53%;
+  float: right;
+}
+.profileContainer a {
+  font-size: 18pt;
+  font-weight: 300;
+  word-spacing: 1000px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.profileContainer:hover a {
+  font-size: 22pt;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+h1 {
+  height: 60px;
+}
+.profileContainer span {
+  margin-bottom: 50px;
+  font-size: 10pt;
+  font-weight: 300;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.profileContainer:hover span {
+  font-size: 1.1em;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+/* *,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.buttons {
+  margin-top: 50px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.buttons {
+  margin-top: 5px;
+  text-align: center;
+  border-radius: 5px;
+}
+.blob-btn {
+  z-index: 1;
+  position: relative;
+  padding: 5px 5px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #0505a9;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  transition: color 0.5s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.blob-btn:before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 30px;
+  border: 2px solid #0505a9;
+  border-radius: 5px;
+}
+.blob-btn:after {
+  content: "";
+  z-index: -2;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 100px;
+  height: 30px;
+  transition: all 0.3s 0.2s;
+  border-radius: 5px;
+}
+.blob-btn:hover {
+  color: #fff;
+  border-radius: 5px;
+}
+.blob-btn:hover:after {
+  transition: all 0.3s;
+  left: 0;
+  top: 0;
+  border-radius: 5px;
+}
+.blob-btn__inner {
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  background: #fff;
+}
+.blob-btn__blobs {
+  position: relative;
+  display: block;
+  height: 100%;
+  filter: url("#goo");
+}
+.blob-btn__blob {
+  position: absolute;
+  top: 2px;
+  width: 25%;
+  height: 100%;
+  background: #0505a9;
+  border-radius: 100%;
+  transform: translate3d(0, 150%, 0) scale(1.7);
+  transition: transform 0.45s;
+}
+@supports (filter: url("#goo")) {
+  transform: translate3d(0, 150%, 0) scale(1.4);
+}
+.blob-btn__blob:nth-child(1) {
+  left: 0%;
+  transition-delay: 0s;
+}
+.blob-btn__blob:nth-child(2) {
+  left: 30%;
+  transition-delay: 0.08s;
+}
+.blob-btn__blob:nth-child(3) {
+  left: 60%;
+  transition-delay: 0.16s;
+}
+.blob-btn__blob:nth-child(4) {
+  left: 90%;
+  transition-delay: 0.24s;
+}
+.blob-btn:hover .blob-btn__blob {
+  transform: translateZ(0) scale(1.7);
+}
+@supports (filter: url("#goo")) {
+  transform: translateZ(0) scale(1.4);
+} */
